@@ -1,5 +1,3 @@
-<?php
-
 <head>
   <meta name="csrf-token" content="{{ csrf_token() }}">         /* csrf توکن */
   <title>{{ config('app.name', 'Laravel') }}</title>            /* نمایش نام سایت */
@@ -24,12 +22,12 @@
       </form>
     </li>
   @endguest
-@endif
+  @endif
 
 /************************************************************************/
 <div class="row">
-  @yield('content')
+  @yield('content')                                         /* برای مشخص کردن جایی برای قرار دادن کد ها داخل آن از طریق فایل دیگر */
 </div>
-
+<script src="{{ asset('js/app.js') }}" defer></script>      /* استفاده می شود asset در فراخوانی فایل جاوا اسکریپت هم */
 
 </body>
